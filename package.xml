@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<package>
+  <name>distributed_mapper_catkin</name>
+  <version>1.0.0</version>
+  <description>Lidar Odometry</description>
+
+  <maintainer email="zhongshp5@mail2.sysu.edu.cn">Shipeng Zhong</maintainer>
+
+  <license>TODO</license>
+
+  <author>Shipeng Zhong</author>
+
+  <buildtool_depend>catkin</buildtool_depend>
+
+  <build_depend>gtsam_catkin</build_depend>
+  <run_depend>gtsam_catkin</run_depend>
+</package>
