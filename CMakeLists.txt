@@ -13,6 +13,8 @@ catkin_package(
   DEPENDS 
 
   CATKIN_DEPENDS
+
+  LIBRARIES distributed_mapper_catkin
 )
 
 # include directories
@@ -54,5 +56,5 @@ add_library(distributed_pcm src/pairwise_consistency_maximization/distributed_pc
 target_link_libraries(distributed_pcm global_map_solver)
 
 # Distributed Mapper
-add_library(distributed_mapper src/distributed_mapper/distributed_mapper.cpp src/distributed_mapper/evaluation_utils.cpp include/distributed_mapper/distributed_mapper_utils.h src/distributed_mapper/distributed_mapper_utils.cpp src/distributed_mapper/run_distributed_mapper.cpp)
-target_link_libraries(distributed_mapper distributed_pcm)
+add_library(distributed_mapper_catkin src/distributed_mapper/distributed_mapper.cpp src/distributed_mapper/evaluation_utils.cpp include/distributed_mapper/distributed_mapper_utils.h src/distributed_mapper/distributed_mapper_utils.cpp src/distributed_mapper/run_distributed_mapper.cpp)
+target_link_libraries(distributed_mapper_catkin graph_utils robot_measurements pairwise_consistency fast_max-clique_finder distributed_pcm global_map_solver)
